@@ -1,7 +1,5 @@
 # 100 days Cairo
 
-###### tags: `100daysCairo`
-
 ## day 1
 Hi gang, 
 I'm trying to solve day 13 of the 17 days of the Cairo Challenge: Pedersen Hash
@@ -31,7 +29,7 @@ Error: code:29:9: Reference 'result' was revoked.
 Feel like start in the middle of the ocean.
 
 ## day 2
-Cairo playground
+**Cairo playground**
 
 - 05_variables
   - `let`, `tempvar` and `local`: `let` creates lot of temporary variables
