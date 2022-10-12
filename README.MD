@@ -35,4 +35,55 @@ Feel like start in the middle of the ocean.
   - `let`, `tempvar` and `local`: `let` creates lot of temporary variables
 
 
-- 06_revoke_references
+## day 3
+**Cairo playground**
+
+### 06_revoke_references
+To be honest have little idea what happend
+- this will not give error
+
+```rust
+func main{output_ptr: felt*}() {
+    let (x) = foo(10);
+    let (y) = foo(5);
+    return ();
+}
+```
+
+- But adding `serialize_word(x + y);` will give error
+
+```rust
+func main{output_ptr: felt*}() {
+    let (x) = foo(10);
+    let (y) = foo(5);
+    serialize_word(x + y);
+    return ();
+}
+```
+
+- 2 ways to fix error:
+  - `alloc_locals;`
+  - `ap += SIZEOF_LOCALS; let (local x) = foo(10); let (local y) = foo(5);`
+
+- **Local variables are not revoked when functions are called**
+
+- Read more about local variables [here](https://www.cairo-lang.org/docs/how_cairo_works/consts.html#local-vars)
+
+
+### 07_dynamic_allocation
+
+- [segments](https://www.cairo-lang.org/docs/how_cairo_works/segments.html) mechanism
+
+```rust
+func sqr_array(array: felt*, length: felt) -> (new_array: felt*) {
+    alloc_locals;
+
+    // allocate new memory slot for new_array
+    let (local new_array) = alloc();
+
+    // calculate the new_array by the helper function _inner_sqr_array
+    // this function does return anything
+    _inner_sqr_array(array=array, new_array=new_array, length=length);
+    return (new_array=new_array);
+}
+```
