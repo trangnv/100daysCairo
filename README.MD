@@ -73,6 +73,7 @@ func main{output_ptr: felt*}() {
 ### 07_dynamic_allocation
 
 - [segments](https://www.cairo-lang.org/docs/how_cairo_works/segments.html) mechanism
+- Thanks to this mechanism, `alloc` allocates an array of an arbitrary size, which does not need to be specified in the call.
 
 ```rust
 func sqr_array(array: felt*, length: felt) -> (new_array: felt*) {
@@ -87,3 +88,14 @@ func sqr_array(array: felt*, length: felt) -> (new_array: felt*) {
     return (new_array=new_array);
 }
 ```
+
+## day 4
+**Cairo playground**
+
+### 08_recursion
+
+### 09_field_elements
+
+### 10_field_elements_02
+
+Just totally random thought, play with `output_ptr` by `serialize_word`
