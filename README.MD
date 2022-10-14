@@ -99,3 +99,33 @@ func sqr_array(array: felt*, length: felt) -> (new_array: felt*) {
 ### 10_field_elements_02
 
 Just totally random thought, play with `output_ptr` by `serialize_word`
+
+### 11_bitwise_operations
+
+## day 5
+**Cairo playground**
+
+### 12_address_of_locals
+
+```rust
+let (__fp__, _) = get_fp_and_pc(); // need this to work
+local x: felt;
+
+local y: felt* = &x; // y is a pointer at position of felt x
+assert [y] = 1234;
+```
+
+### 13_struct
+
+- Implementation of a stack using a linked list.
+  - Remind of CS50 C lession, linked list element contains  (next: pointer*, value, size)
+
+- To turn memory address into a pointer we have to use the & operator. 
+- By default the compiler wouldn’t know what type of pointer this is so to inform it of the type we have to use the function `cast` and provide the type as the second argument
+
+- `new_node.next = cast(0, Node*);`: pointer to the 1st Node struct
+
+### 14_pedersen_hash
+- implements a Pedersen hash chain.
+
+### 15_hints
