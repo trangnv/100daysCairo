@@ -128,4 +128,41 @@ assert [y] = 1234;
 ### 14_pedersen_hash
 - implements a Pedersen hash chain.
 
+- tried this simple recursion but got `revoked`
+
+```bash
+Error: code:28:9: Reference 'result' was revoked.
+        result = hash2(hash_chain(data_ptr, length - 1), x_n);
+        ^****^
+```
+
+```rust
+func hash_chain{hash_ptr: HashBuiltin*}(data_ptr: felt*, length: felt) -> (result: felt) {
+    if (length == 2) {
+        let (result) = hash2(x=[data_ptr], y=[data_ptr + 1]);
+        return (result=result);
+    } else {
+        // Fix here:
+        let x_n: felt = data_ptr[length];
+        result = hash2(hash_chain(data_ptr, length - 1), x_n);
+        return (result=result);
+    }
+}
+```
+
+## day 6
 ### 15_hints
+- The idea is that the verifier only needs to be convinced that res * res = n, it doesn't really care how res was computed.
+- In such cases, we don't have to compute res in pure Cairo - we can write a piece of Python code inside the Cairo program, which is called a "hint".
+- From the verifier's point of view, the hint is completely transparent.
+
+
+### 16_SHARP
+wtf
+
+### 17_StarkNet_contract
+
+### 18_Cairo_games_example
+
+
+prover, verifier, sharp, where it goes
