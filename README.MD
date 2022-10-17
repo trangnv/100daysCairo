@@ -219,3 +219,9 @@ def hex_to_felt(val):
 >>> uint256(340282366920938463463374607431768211456)
 (0, 1) 
 ```
+
+## day 8
+- Dictionary
+  - A dictionary is created using the `default_dict_new()` module from the Common Library
+  - https://perama-v.github.io/cairo/examples/default_dict/
+- Something with a graph that might be well related, [PAKHET Cairo game](https://www.cairo-lang.org/the-cairo-games/puzzles/vol-2-solutions/#pakhet)
