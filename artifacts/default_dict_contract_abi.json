@@ -1,0 +1,35 @@
+[
+    {
+        "inputs": [
+            {
+                "name": "key_1",
+                "type": "felt"
+            },
+            {
+                "name": "key_2",
+                "type": "felt"
+            },
+            {
+                "name": "key_3",
+                "type": "felt"
+            }
+        ],
+        "name": "get_value_of_keys",
+        "outputs": [
+            {
+                "name": "val_1",
+                "type": "felt"
+            },
+            {
+                "name": "val_2",
+                "type": "felt"
+            },
+            {
+                "name": "val_3",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
