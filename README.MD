@@ -225,3 +225,6 @@ def hex_to_felt(val):
   - A dictionary is created using the `default_dict_new()` module from the Common Library
   - https://perama-v.github.io/cairo/examples/default_dict/
 - Something with a graph that might be well related, [PAKHET Cairo game](https://www.cairo-lang.org/the-cairo-games/puzzles/vol-2-solutions/#pakhet)
+
+## day 9
+- `default_dict.cairo`
