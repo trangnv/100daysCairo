@@ -228,3 +228,17 @@ def hex_to_felt(val):
 
 ## day 9
 - `default_dict.cairo`
+
+.
+.
+.
+
+## day 14
+- skip, not really skip but tried different approach to solve a particular problem, ml-starknet
+- but sometime, you dont know what you dont know so resuming
+
+StarkNet messaging bridge
+
+### ex0
+- call `ex_0_a`, with L1 address, amount = 1
+- rank will be assigned
