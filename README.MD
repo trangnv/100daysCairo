@@ -242,3 +242,23 @@ StarkNet messaging bridge
 ### ex0
 - call `ex_0_a`, with L1 address, amount = 1
 - rank will be assigned
+
+
+## day 15
+- `Unexpected implicit argument 'hash_ptr' in an external function.`
+  - dont put `hash_ptr` as argument
+  - use `pedersen_ptr: HashBuiltin*,`
+  - in the function that need `hash_ptr` define it explicitly
+  e.g `hash2{hash_ptr=pedersen_ptr}`
+
+- facing issue on `starknet declare`
+
+```
+❯ starknet declare --contract artifacts/contract.json
+Error: KeyError: 'deployed'
+```
+
+
+## day 16
+
+
