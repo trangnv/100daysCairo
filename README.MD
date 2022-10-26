@@ -260,5 +260,27 @@ Error: KeyError: 'deployed'
 
 
 ## day 16
+- nile declare
+- nile setup got weird
+```bash
+❯ echo $PKEY2
+key exists
+
+❯ nile setup PKEY2
+❌ Cannot find PKEY2 in env.
+Check spelling and that it exists.
+Try moving the .env to the root of your project.
+```
+- work around
+```bash
+PKEY1=_key_ nile setup PKEY1
+```
+- `PKEY=_key_ nile declare contract` also work
+- `nile deploy contract 3  --network goerli`
+  - **worked**
+  - no need `--class_hash`
+  - takes care of declaration
+
+
 
 
